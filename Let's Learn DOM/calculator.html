@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+<body>
+   <style>
+      .section{
+         width: 800px;
+           box-shadow: 5px 5px 5px 5px rgb(221, 197, 197);
+  padding: 20px;
+  margin: auto;
+  text-align: center;
+      }
+h2{
+   width: 500px;
+  box-shadow: 5px 5px 5px 5px rgb(221, 197, 197);
+  padding: 20px;
+  margin: auto;
+  
+}
+input{
+   width:400px;
+   padding: 20px;
+   margin:20px auto;
+   border: 2px solid;
+}
+label{
+   padding: 20px;
+}
+.cl{
+   gap:20px
+}
+button{
+   background-color: bisque;
+   padding: 10px 20px;
+   text-align: center;
+   border-radius: 20px;
+}
+   </style>
+ <section class="section">
+   <h2>Let's Calculate </h2>
+   
+   <div class="cl">
+    <label for="value">Bangla</label>
+   <input type="text" placeholder="Number" id="bangla"> <br>
+     
+      <label for="value">English</label>
+   <input type="text" placeholder="Number" id="english"> <br>
+
+     <label for="value">Mathmatics</label>
+   <input type="text" placeholder="Number" id="math">
+   
+
+   </div>
+      <button onclick="Calculate()">Let's Calculate</button>
+      <div id="results">
+         <h4 onclick="Calculate()">Total Mark:00</h4>
+      </div>
+   <div id="average"> <h4>Average Mark:00</h4></div>
+ </section>
+
+   <script>
+  let bangla =document.getElementById("bangla");
+  let english =document.getElementById("english");
+  let math =document.getElementById("math");
+ function Calculate(){
+   let sum = parseInt(bangla.value)+parseInt(english.value)+parseInt(math.value);
+   console.log(sum);
+   document.getElementById("results").innerHTML="Total Mark:"+sum;
+   
+ }
+   
+ 
+   </script>
+   <SCript>
+      // Marks for the subjects
+         const marks = {
+            Math: 85,
+            English: 78,
+            Physics: 92
+         };
+
+         // Calculate the total marks
+         const totalMarks = marks.Math + marks.English + marks.Physics;
+
+         // Calculate the average marks
+         const averageMarks = totalMarks / 3;
+
+         // Output the results
+         console.log("Total Marks:", totalMarks);
+         console.log("Average Marks:", averageMarks.toFixed(2));
+   </SCript>
+</body>
+</html>

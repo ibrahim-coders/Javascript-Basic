@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style type ="text/tailwindcss">
+    @layer components{
+      .tasks{
+       @apply p-2 flex justify-between m-2 border-[2px] border-green-200;
+      }
+      .delete{
+        @apply bg-red-600 p-2 rounded-lg;
+      }
+      .edit{
+        @apply bg-green-600 p-2 rounded-lg;
+      }
+    }
+  </style>
+  </head>
+<body>
+<main>
+  <section>
+    <h2 class="text-center py-8 text-4xl font-bold">My Task LiSt App</h2>
+  <div class="max-w-xl mx-auto mt-10">
+<form id="task-form" class="flex justify-between items-center border-b-2">
+
+    <label for="UserEmail"
+      class="relative block overflow-hidden  bg-transparent pt-3 focus-within:border-blue-600">
+      <input type="text" 
+      id="task-input"
+      placeholder=""
+        class="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-2xl" />
+    
+      <span
+        class="absolute start-0 top-2 -translate-y-1/2 text-3xl text-gray-700 transition-all peer-placeholder-shown:top-1/2 peer-placeholder-shown:text-sm peer-focus:top-2 peer-focus:text-xs">
+        Create a task
+      </span>
+    </label>
+<!-- Base -->
+
+<div>
+  <button class="group relative inline-block text-sm m-4 font-medium text-black focus:outline-none focus:ring active:text-indigo-500"
+   id="submit"
+   type="submit">
+    <span
+      class="absolute inset-0 translate-x-0.5 translate-y-0.5 bg-slate-200 transition-transform group-hover:translate-x-0 group-hover:translate-y-0"></span>
+  
+    <span class="relative block border border-current bg-white px-8 py-3"> Add a Task </span>
+  </button>
+
+</div>
+</form>
+  </div>
+  </section>
+
+  <section  class="max-w-xl m-auto">
+    <h3 class="font-semibold text-lg border-b border-gray-300 py-4 mb-6">Task ongoing </h3>
+
+    <div id="task-list" class="space-y-4"> 
+
+      <!-- <div class="tasks">
+<input type="text" value="text" class="w-[90%]">
+</input>
+<div class="w-[30%]">
+  <button class="delete">Delete</button>
+  <button class="edit">Edit</button>
+</div>
+    </div> -->
+ </div>
+
+
+  </section>
+</main>
+<script src="index.js"></script>
+</body>
+</html>

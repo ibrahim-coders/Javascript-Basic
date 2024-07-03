@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <style>
+    * {
+      margin: auto;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Roboto", sans-serif;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+
+    }
+
+    .accordion {
+      max-width: 700px;
+      /* height: 80px; */
+      overflow: hidden;
+      margin: auto;
+      background-color: blue;
+      color: white;
+      padding: 1rem;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .accordina-titel {
+      display: flex;
+    }
+
+    .accordion-content {
+      padding: 10px;
+      border: 2px solid black;
+      display: none;
+    }
+
+    .bx {
+      font-size: 35px;
+      cursor: pointer;
+      transition: all .5s ease;
+    }
+
+    .bx:hover {
+      transform: rotate(120deg);
+      color: yellowgreen;
+    }
+  </style>
+  <section class="container">
+    <div class="accordion">
+      <div class="accordina-titel">
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, magnam?</h2>
+        <div class="close"><i class='bx bx-plus'></i></div>
+      </div>
+
+      <div class="accordion-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam nesciunt ullam,
+        dicta aspernatur explicabo ipsa nam ea tempore! Maxime sint quos corrupti ?</div>
+    </div>
+  </section>
+  <script>
+    const closeIcon = document.getElementsByClassName("close");
+    const accordina = document.getElementsByClassName("accordina");
+    const accordionContent = document.getElementsByClassName("accordion-content");
+    closeIcon[0].addEventListener("mouseover", () => {
+      accordionContent[0].style.display = "block";
+      accordion.style[0].display = "none";
+    });
+  </script>
+  <!-- <script>
+      const closeIcon = document.getElementsByClassName("close")[0];
+      const accordion = document.getElementsByClassName("accordion")[0];
+      const accordionContent = document.getElementsByClassName("accordion-content")[0];
+
+      closeIcon.addEventListener("mouseover", () => {
+        if (accordionContent.style.display === "none" || accordionContent.style.display === "") {
+          accordionContent.style.display = "block";
+          accordion.style.height = "auto";
+        } else {
+          accordionContent.style.display = "none";
+          accordion.style.height = "100px";
+        }
+      });
+    </script> -->
+</body>
+
+</html>

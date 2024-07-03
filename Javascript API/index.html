@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  * {
+    margin: 0;
+  }
+
+  .container{
+    max-width:800px;
+    margin:auto;
+    font-size: 20px;
+    margin-top: 40px;
+  }
+  .box{
+    border:2px solid gainsboro;
+    padding:10px;
+    display: flex;
+    gap:10px;
+  }
+  .posts {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+</style>
+<body>
+ 
+  <div class="container posts">
+    <!-- <div class="box">
+<h4>Id</h4>
+<h2>title</h2>
+<p>body</p>
+    </div> -->
+  </div>
+
+  <script src="api.js"></script>
+</body>
+</html>

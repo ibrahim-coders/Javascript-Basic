@@ -1,0 +1,27 @@
+body{
+  padding: 10px;
+  min-width:500px;
+  background-color: azure;
+  border: 2px solid gray;
+  min-height:500px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+#input{
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+}
+.btn{
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 8px;
+}
+ul li{
+  font-size: 12px;
+}
+.link{
+color: rgb(46, 43, 41);
+}

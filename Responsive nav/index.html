@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navigation</title>
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet">
+  <style>
+    .nav-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav#mobile-menu {
+      position: fixed;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      background: #fff;
+      transition: left 0.3s ease;
+      z-index: 1000;
+    }
+
+    nav#mobile-menu li {
+      list-style: none;
+      padding: 1rem;
+    }
+
+    nav#mobile-menu li a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    .nav-icon {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-icon i {
+      font-size: 24px;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="nav-section">
+      <div class="logo"><img src="image/meni-logo-light.png" alt=""></div>
+      <nav id="nav">
+        <li><a href="">HOME</a></li>
+        <li><a href="">PAGES</a></li>
+        <li><a href="">ELEMENTS</a></li>
+        <li><a href="">PORTFOLIO</a></li>
+        <li><a href="">BLOG</a></li>
+        <li><a href="">SHOP</a></li>
+      </nav>
+      <div class="nav-icon" id="menuicon">
+        <i class='bx bxs-shopping-bag'></i>
+        <i class='bx bx-search-alt-2'></i>
+        <i class='bx bx-menu' id="menu-open"></i>
+        <i class='bx bx-plus' id="menu-close" style="display: none;"></i>
+      </div>
+    </div>
+    <nav id="mobile-menu">
+      <li><a href="nav.html">HOME</a></li>
+      <li><a href="">PAGES</a></li>
+      <li><a href="">ELEMENTS</a></li>
+      <li><a href="">PORTFOLIO</a></li>
+      <li><a href="">BLOG</a></li>
+      <li><a href="">SHOP</a></li>
+    </nav>
+  </header>
+  
+
+<script>
+
+  const mobileMenu= document.getElementById("mobile-Mmenu");
+   const menuIcon =document.getElementById("menuicon");
+    const menuOpen = document.getElementById("menu-open");
+    const menuClose = document.getElementById("menu-close");
+
+    menuIcon.addEventListener("click", () => {
+      if (mobileMenu.style.left === "0px") {
+        mobileMenu.style.left = "-100%";
+        menuOpen.style.display = "block";
+        menuClose.style.display = "none";
+      } else {
+        mobileMenu.style.left = "0";
+        menuOpen.style.display = "none";
+        menuClose.style.display = "block";
+      }
+    });
+  </script>
+</body>
+
+</html>

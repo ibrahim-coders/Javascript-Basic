@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+</head>
+
+<body>
+<section class="max-w-[800px] shadow-xl mx-auto p-10 mt-10">
+    <h2 class="text-3xl font-bold text-center ">Le's Calculate</h2>
+    <div class="w-[500px]  mx-auto p-4 rounded-lg mt-10 flex-col gap-4">
+     
+
+
+      <input type="text" placeholder="insert value-1" class="border-2 w-full p-2 rounded-xl capitalize m-2"id="input-1">
+   
+
+      <input type="text" placeholder="insert value-2" class="border-2 w-full p-2 rounded-xl capitalize m-2" id="input-2">
+      <button id="Calculate"
+        class="bg-black w-[500px] text-center text-white m-2 rounded-xl py-2 hover:bg-gray-700 "onclick="calculate()">Submit</button>
+        <div id="results">
+          <h4> <span id="add"></span></h4>
+          <h4 >Add: <span id="marks"></span></h4>
+        </div>
+    </div>
+    
+</section>
+<script>
+  let input1 =document.getElementById("input-1");
+  let input2 =document.getElementById("input-2");
+  function calculate(){
+    let sum=parseInt(input1.value)+parseInt(input2.value);
+   
+   
+    let marks = parseInt(input1.value) / parseInt(input2.value);
+     document.getElementById("add").innerHTML =  "Total Number:"+ sum;
+     document.getElementById("marks").innerHTML =  marks;
+  }
+</script>
+<!-- <script>
+  function calculate() {
+    let input1 = document.getElementById("input-1").value;
+    let input2 = document.getElementById("input-2").value;
+    let sum = parseInt(input1) + parseInt(input2);
+    let marks = parseInt(input1) / parseInt(input2);
+
+    document.getElementById("add").innerHTML = sum;
+    document.getElementById("marks").innerHTML = marks;
+  }
+</script> -->
+
+</body>
+
+</html>

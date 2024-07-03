@@ -1,0 +1,15 @@
+.popup{
+width: 450px;
+background-color: aliceblue;
+}
+.picker{
+  width:450px;
+  height: 100px;
+  background-color: #ffd17b;
+}
+#color-picker{
+  margin: auto;
+  text-align: center;
+  padding: 10px 15px;
+  background-color: orangered;
+}
